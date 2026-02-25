@@ -1,0 +1,16 @@
+# Visanté AI Engine - Render Blueprint
+# https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    runtime: python
+    name: visante-ai-engine
+
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+    healthCheckPath: /api/v1/status
+
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false  # Set in Render Dashboard → Environment
