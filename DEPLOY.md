@@ -2,6 +2,11 @@
 
 This guide covers deploying the Visanté AI Engine to [Render](https://render.com) so the mobile app can access the API endpoints.
 
+## Git repo and Render host
+
+- **Git repository**: `https://github.com/YOUR_USERNAME/visanteaiengine` — replace `YOUR_USERNAME` with your GitHub username or org.
+- **Render host** (after deploy): `https://visante-ai-engine.onrender.com` — matches the service name in `render.yaml`; use your actual Render service URL if you chose a different name.
+
 ## Prerequisites
 
 - [GitHub](https://github.com) account (or GitLab / Bitbucket)
@@ -38,7 +43,7 @@ This guide covers deploying the Visanté AI Engine to [Render](https://render.co
 
 4. **Get the live URL**
 
-   - Your API will be at `https://<service-name>.onrender.com`
+   - Your API will be at `https://visante-ai-engine.onrender.com` (or your custom service name)
    - Share this base URL with the mobile dev
 
 ---
@@ -77,7 +82,7 @@ This guide covers deploying the Visanté AI Engine to [Render](https://render.co
 6. **Create Web Service**
 
    - Render will build and deploy automatically
-   - Once ready, your API URL will be `https://<service-name>.onrender.com`
+   - Once ready, your API URL will be `https://visante-ai-engine.onrender.com` (or your custom service name)
 
 ---
 
@@ -98,8 +103,10 @@ Use the included `Dockerfile` if you prefer a container-based deploy:
 Once deployed, the base URL is:
 
 ```
-https://<your-service-name>.onrender.com
+https://visante-ai-engine.onrender.com
 ```
+
+(Use your actual Render service URL if you set a different service name.)
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
@@ -111,7 +118,7 @@ https://<your-service-name>.onrender.com
 ### WebSocket Example
 
 ```text
-wss://<your-service-name>.onrender.com/ws/triage
+wss://visante-ai-engine.onrender.com/ws/triage
 ```
 
 - **Input**: Raw binary PCM 16-bit, mono, 16000 Hz

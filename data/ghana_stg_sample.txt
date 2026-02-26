@@ -1,0 +1,19 @@
+Republic of Ghana, Ministry of Health, Ghana National Drugs Programme (GNDP), Standard Treatment Guidelines, 7th Edition, 2017.
+
+Sample excerpt for RAG indexing when the full PDF is not yet available.
+
+Fever and malaria: In malaria-endemic areas, assess for malaria in all febrile patients. Use rapid diagnostic test (RDT) or microscopy when available. Treat uncomplicated malaria according to national guidelines. Paracetamol for fever relief.
+
+Respiratory: Upper respiratory tract infections are common. Most are viral. Antibiotics are not routinely indicated. Consider amoxicillin only when bacterial infection is suspected (e.g. prolonged fever, purulent discharge). Cough: symptomatic treatment; avoid codeine in children.
+
+Pain: Use step-wise analgesia. Paracetamol first line for mild to moderate pain. NSAIDs (e.g. ibuprofen) for inflammation. Opioids only when necessary and under clinical supervision.
+
+Chest pain: Assess for cardiac and other serious causes. Refer urgently if acute coronary syndrome or pulmonary embolism suspected. Do not delay emergency care for chest pain with dyspnoea or collapse.
+
+Difficulty breathing: Treat cause. Severe respiratory distress is an emergency; ensure airway and oxygenation; refer urgently. Asthma: bronchodilators and inhaled corticosteroids per guidelines.
+
+Bleeding: Apply direct pressure for external bleeding. Significant or uncontrolled bleeding requires emergency care. Assess for shock and anaemia.
+
+Consciousness: Altered consciousness or fainting requires urgent assessment. Exclude hypoglycaemia, severe infection, neurological events. Refer to emergency care when indicated.
+
+Place the full Ghana Standard Treatment Guidelines PDF in this folder as ghana_standard_treatment_guidelines_7ed_2017.pdf and re-run the RAG indexer to populate the vector store.
