@@ -67,7 +67,7 @@ This guide covers deploying the Visanté AI Engine to [Render](https://render.co
    | Branch        | `main`                                             |
    | Runtime       | Python 3                                           |
    | Build Command | `pip install -r requirements.txt`                  |
-   | Start Command | `uvicorn main:app --host 0.0.0.0 --port $PORT`     |
+   | Start Command | `uvicorn app.main:app --host 0.0.0.0 --port $PORT`     |
 
 4. **Environment variables**
 
@@ -140,6 +140,7 @@ wss://visante-ai-engine.onrender.com/ws/triage
 | Issue | Action |
 |-------|--------|
 | `GOOGLE_API_KEY required` | Add it in Render Dashboard → Environment |
-| Build fails | Check Python 3.11 in `runtime.txt`; verify `requirements.txt` |
+| Build fails | Check Python 3.11 in `runtime.txt`; verify `requirements.txt`. Use **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT` (not `main:app`). **ChromaDB does not support Python 3.14** — ensure `.python-version` is `3.11.9` and/or set env `PYTHON_VERSION=3.11.9` in Render. |
+| Build timeout | `sentence-transformers` and `chromadb` are large; the first build can take 5–10 min. Retry once, or try **Option C: Docker** deploy. |
 | WebSocket fails | Ensure the mobile app uses `wss://` on HTTPS |
 | Slow first request | Normal on free tier; service is waking from idle |

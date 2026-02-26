@@ -201,7 +201,7 @@ Steps:
 1. Push code to GitHub (or connect the repo in Render).  
 2. Create a **Web Service** (or use a **Blueprint** with `render.yaml`).  
 3. Set **Build Command:** `pip install -r requirements.txt`.  
-4. Set **Start Command:** `uvicorn main:app --host 0.0.0.0 --port $PORT`.  
+4. Set **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.  
 5. Add **Environment:** `GOOGLE_API_KEY` = your Gemini API key.  
 6. Optional: set **Health Check Path** to `/api/v1/status`.
 
