@@ -17,6 +17,8 @@ This guide covers deploying the Visanté AI Engine to [Render](https://render.co
 
 ## Option A: Blueprint (Infrastructure as Code)
 
+The repo uses **Docker** in the Blueprint so the app runs on **Python 3.11** (ChromaDB does not support Python 3.14). Render will build the image from the root `Dockerfile` and run it.
+
 1. **Push your code to GitHub**
 
    ```bash
@@ -33,7 +35,7 @@ This guide covers deploying the Visanté AI Engine to [Render](https://render.co
    - Go to [Render Dashboard](https://dashboard.render.com)
    - **New** → **Blueprint**
    - Connect your GitHub repo
-   - Render will detect `render.yaml` and create the web service
+   - Render will detect `render.yaml` and create the **Docker** web service (Python 3.11 in the image)
 
 3. **Add `GOOGLE_API_KEY`**
 

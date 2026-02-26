@@ -1,18 +1,14 @@
 # Visanté AI Engine - Render Blueprint
-# https://render.com/docs/blueprint-spec
+# Uses Docker so we run Python 3.11 (ChromaDB breaks on 3.14).
 
 services:
   - type: web
-    runtime: python
+    runtime: docker
     name: visante-ai-engine
 
-    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
-
+    dockerfilePath: ./Dockerfile
     healthCheckPath: /api/v1/status
 
     envVars:
-      - key: PYTHON_VERSION
-        value: "3.11.9"
       - key: GOOGLE_API_KEY
         sync: false  # Set in Render Dashboard → Environment

@@ -1,0 +1,32 @@
+# Git and env
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+
+# Python
+.venv
+venv
+__pycache__
+*.py[cod]
+.pytest_cache
+.coverage
+htmlcov
+*.egg-info
+
+# IDE and OS
+.idea
+.vscode
+*.swp
+.DS_Store
+
+# Docs and dev (not needed at runtime)
+docs/
+tests/
+scripts/
+*.md
+!README.md
+
+# Optional: exclude large/local data (app creates chroma at runtime if needed)
+# data/
